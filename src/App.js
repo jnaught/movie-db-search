@@ -10,7 +10,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1>The Movie Database </h1><p><a href='https://www.themoviedb.org'>tmdb.org</a></p>
+          <h1>The Movie Database </h1><p><a href='https://www.themoviedb.org'>api: tmdb.org</a></p>
         </header>
         <p className="App-intro">
           {/* To get started, edit <code>src/App.js</code> and save to reload. */}

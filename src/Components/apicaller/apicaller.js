@@ -10,7 +10,7 @@ export default class apiCaller extends Component {
         super(props);
 
         this.state = {
-            movie: []
+            searchMovie: ''
 
 
         };
@@ -19,9 +19,9 @@ export default class apiCaller extends Component {
 
 
 getApiData(){
-    axios.post('/api/getApiData', {movie: this.state.movie})
+    axios.post('/api/getApiData', {searchMovie: this.state.searchMovie})
     .then(response => {
-        return this.setState({movie: response.data});
+        return this.setState({searchMovie: response.data});
 
     })
     .catch(error => {
