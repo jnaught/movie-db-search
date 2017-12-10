@@ -1,9 +1,8 @@
 
 import React , { Component } from 'react';
+import './apicaller.css';
+import axios from 'axios';
 
-import axois from 'axios';
-
-import './styles.css';
 
 export default class apiCaller extends Component {
 
@@ -20,7 +19,7 @@ export default class apiCaller extends Component {
 
 
 getApiData(){
-    axios.get('/api/getApiData', {movie: this.state.movie})
+    axios.post('/api/getApiData', {movie: this.state.movie})
     .then(response => {
         return this.setState({movie: response.data});
 
@@ -33,16 +32,12 @@ getApiData(){
 render() {
     return (
         <div className='container'>
+       
 
-        <h1 className='redColor'></h1>
-        <p>{''}We'll pass this data to our backend in the form of
-						req.body. We'll then use this data in our Weather API to
-						get back a brief summary of the weather today.{" "}</p>
-
-                        <input onChange={event => {this.setState({ movie: event.target.value });
+                       <input className='inputLine' placeholder='Search Movies' onChange={event => {this.setState({ movie: event.target.value });
 					}}
 				/>
-                <button onClick={this.getApiData}> Get Api Data </button>
+                <button className='button' onClick={this.getApiData}> Search Movies </button>
                 <h3> {this.state.movie} </h3>
                 </div>
 

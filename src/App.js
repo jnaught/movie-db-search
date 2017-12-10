@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './tmdb_logo.jpg';
 import './App.css';
 import ApiCaller from "./Components/apicaller/apicaller";
+import Body from './Components/body/body';
 
 class App extends Component {
   render() {
@@ -9,12 +10,13 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1>The Movie Database </h1><p><a href='https://www.themoviedb.org'>tmdb.org</a></p>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          {/* To get started, edit <code>src/App.js</code> and save to reload. */}
         </p>
-        <ApiCaller />
+        <div><ApiCaller /></div>
+        <div><Body /></div>
       </div>
     );
   }
