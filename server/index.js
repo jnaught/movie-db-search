@@ -12,11 +12,11 @@ const port = 3001;
 const controller = require("./controllers/control.js");
 
 //CONNECTION TEST
-app.get("/api/test", (req, res, next) => { 
-	res.json("Success"); 
-})
+// app.get("/api/test", (req, res, next) => { 
+// 	res.json("Success"); 
+// })
 
-app.post("/api/getApiData", controller.getApiData);
+app.post("/api/getData", controller.getData);
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}.`);

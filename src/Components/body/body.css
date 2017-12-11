@@ -1,3 +1,4 @@
+
 .results{
     display: flex;
     justify-content: flex-start;
@@ -12,17 +13,51 @@
     margin-left:30px;
     margin-top: 35px;
     display: flex;
-    justify-content: space-around;
-    background-color: white;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: transparent;
     width: 60%;
-    height: 90vh;
+    height: auto;
 }
 .display-video {
     margin-left:30px;
     margin-top: 35px;
     display: flex;
-    background-color: white;
-    width: 35%;
-    height: 45vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: transparent;
+    width: 35vw;
+    height: auto;
 }
 
+.imgResize{
+    height: 25%;
+    width: 50%;
+}
+.poster{
+    display: flex;
+    justify-content: center;
+}
+.display-header{
+font-size: 25px;
+
+}
+.display-overview {
+    margin-left:30px;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    width: 35vw;
+    height: auto;
+}
+.p-style{
+font-family: fantasy;
+font-size: 25px;
+
+}
+.right-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
